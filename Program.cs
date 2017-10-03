@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +16,6 @@ namespace ConsoleApp15
             int j = 0;
             int m = 0;
             int n = 0;
-
             Random rand = new Random();
 
             List<List<int>> matrix1 = new List<List<int>>();
@@ -38,8 +37,13 @@ namespace ConsoleApp15
                     t2.Add(rand.Next(1, 25));
                 }
             }
+            Console.WriteLine("Первая матрица:");
             PrintValue(matrix1);
-            Console.ReadLine();
+        }
+        private static void PrintValue(List<List<int>> first)
+        {
+            foreach (var z in first)
+                Console.WriteLine(z.Aggregate("", (e, q) => e + " " + q));
         }
     }
 }
