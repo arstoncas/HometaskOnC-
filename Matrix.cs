@@ -20,7 +20,7 @@ namespace ConsoleApp15
                 List<int> t = new List<int>();
                 for (int j = 0; j < x; j++)
                 {
-                    t.Add(rand.Next(1, 25));
+                    t.Add(rand.Next(1, 4));
                 }
                 matrix1.Add(t);
             }
@@ -31,7 +31,7 @@ namespace ConsoleApp15
                 List<int> t = new List<int>();
                 for (int j = 0; j < x; j++)
                 {
-                    t.Add(rand.Next(1, 25));
+                    t.Add(rand.Next(1, 4));
                 }
                 matrix2.Add(t);
             }
@@ -49,11 +49,16 @@ namespace ConsoleApp15
                 }
                 result.Add(t);
             }
-            for (int i = 0; i < x; i++)
+            for (int i = 0; i < x; i++) 
             {
-                for (int j = 0; j < x; j++)
+                for (int j = 0; j < x; j++) 
                 {
-                    result[i][j] = (matrix1[i][j] * matrix2[j][i]); // killmeplease
+                    {
+                    for (int k = 0; k < x; k++)
+                        {
+                        result[i][j] = result[i][j] + (matrix1[i][k] * matrix2[k][j]); // killmeplease
+                        }
+                    }       
                 }
             }
             Console.WriteLine("Результат");
