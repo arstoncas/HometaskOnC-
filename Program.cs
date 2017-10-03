@@ -40,10 +40,11 @@ namespace ConsoleApp15
             Console.WriteLine("Первая матрица:");
             PrintValue(matrix1);
         }
-        private static void PrintValue(List<List<int>> first)
+        private static void PrintValue(List<List<int>> matrix1)
         {
-            foreach (var z in first)
+            foreach (var z in matrix1)
                 Console.WriteLine(z.Aggregate("", (e, q) => e + " " + q));
         }
     }
 }
+
