@@ -20,7 +20,7 @@ namespace ConsoleApp15
                 List<int> t = new List<int>();
                 for (int j = 0; j < x; j++)
                 {
-                    t.Add(rand.Next(1, 4));
+                    t.Add(rand.Next(1, 20));
                 }
                 matrix1.Add(t);
             }
@@ -31,7 +31,7 @@ namespace ConsoleApp15
                 List<int> t = new List<int>();
                 for (int j = 0; j < x; j++)
                 {
-                    t.Add(rand.Next(1, 4));
+                    t.Add(rand.Next(1, 20));
                 }
                 matrix2.Add(t);
             }
