@@ -10,30 +10,30 @@ namespace ClassProgram
     {
         static void Main(string[] args)
         {
-            Fregate Nevskiy = new Fregate();
-            Nevskiy.Type = "Фрегат";
-            Nevskiy.Name = "Александр Невский";
-            Nevskiy.whatsonlist();
-            Nevskiy.Shoot();
-            Nevskiy.ShootEffects();
+            Battleship Maria = new Battleship();
+            Maria.Type = "Линкор";
+            Maria.Name = "Императрица Мария";
+            Maria.Whatsonlist();
+            string toPrint = Maria.Shoot();
+            Console.WriteLine(toPrint);
             Console.WriteLine();
 
 
             Caravelle Saint = new Caravelle();
             Saint.Type = "Каравелла";
             Saint.Name = "Святой Христофор";
-            Saint.whatsonlist();
-            Saint.Shoot();
-            Saint.ShootEffects();
+            Saint.Whatsonlist();
+            string toPrint2 = Saint.Shoot();
+            Console.WriteLine(toPrint2);
             Console.WriteLine();
 
 
             Steamship Titanic = new Steamship();
             Titanic.Type = "Пароход";
             Titanic.Name = "Титаник";
-            Titanic.whatsonlist();
-            Titanic.Shoot();
-            Titanic.ShootEffects();
+            Titanic.Whatsonlist();
+            string toPrint3 = Titanic.Shoot();
+            Console.WriteLine(toPrint3);
 
             Console.ReadKey();
         }

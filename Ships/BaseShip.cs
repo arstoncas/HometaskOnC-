@@ -10,31 +10,44 @@ namespace ClassProgram
     {
         public string Type { get; set; }
         public string Name { get; set; }
-        public void whatsonlist()
+        public void Whatsonlist()
         {
-            Console.WriteLine("Наблюдаем: " + Type + "; под названием: " + Name +"; ");
+            Console.WriteLine("Наблюдаем: " + Type + "; под названием: " + Name + "; " );
         }
-        public void Shoot()
+        public virtual string Shoot()
         {
-            Console.WriteLine("Залп!");
+            
+            string res = "Залп!.. Враг подбит!"  ;
+            return res;
         }
+
     }
-    class Fregate : BaseShip
+
+
+
+    class Battleship : BaseShip
     {
-        public void ShootEffects()
+        
+    }
+
+
+    class Caravelle : BaseShip
+    {
+        public override string Shoot()
         {
-            Console.WriteLine("Так как корабль деревянный, он загорелся");
+            string res = "Залп!.. Так как корабль деревянный, он загорелся";
+            return res;
         }
     }
-    class Caravelle : Fregate
-    {
-    
-    }
+
+
+
     class Steamship : BaseShip
     {
-        public void ShootEffects()
+        public override string Shoot()
         {
-            Console.WriteLine("Ошибочка: стрелять нечем, орудий нет.");
+            string res = "За.. А, нет, ошибочка: стрелять нечем, орудий нет.";
+            return res;
         }
     }
 }
